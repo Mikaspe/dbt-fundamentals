@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: dbt-tutorial
+    schema: stripe
+    tables:
+      - name: payment
+        columns:
+          - name: amount
+            tests:
+              - not_null
